@@ -1,0 +1,320 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #415a77;
+    color: rgb(20, 19, 19);
+    line-height: 1.5;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+}
+
+.resume-card {
+    max-width: 64rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+/* Header styles */
+.header {
+    height: 16rem; /* Increased height to ensure content fits */
+    background: linear-gradient(to right, #000000, #000000);
+    background-color: #000000f8; /* Fallback for older browsers */
+    position: relative;
+}
+
+.header-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.5rem; /* Increased padding for spacing */
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem; /* Added gap for better spacing */
+}
+
+.profile-img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.5rem;
+    border: 4px solid rgb(114, 9, 183);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.header-text {
+    margin-left: 1rem; /* Adjusted spacing */
+    padding-bottom: 1rem;
+}
+
+.header-text h1 {
+    font-size: 2rem; /* Adjusted font size for visibility */
+    font-weight: bold;
+    color: rgb(114, 9, 183);
+}
+
+.header-text p {
+    font-size: 1.125rem; /* Adjusted for better visibility */
+    color: rgb(219, 234, 254);
+}
+
+/* Contact info styles */
+.contact-info {
+    margin-top: 4rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.875rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: rgb(75, 85, 99);
+    text-decoration: none;
+}
+
+.contact-item:hover {
+    color: #2563eb;
+}
+
+.contact-item i {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 2rem 1.5rem;
+}
+
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.section h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgb(31, 41, 55);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgb(229, 231, 235);
+}
+
+/* Skills styles */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    margin-bottom: 1rem;
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(55, 65, 81);
+    margin-bottom: 0.5rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    padding: 0.25rem 0.75rem;
+    background-color: rgb(0, 2, 4);
+    color: #4361ee;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+/* Experience styles */
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.job-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: rgb(31, 41, 55);
+}
+
+.date {
+    font-size: 0.875rem;
+    color: rgb(107, 114, 128);
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: rgb(75, 85, 99);
+}
+
+.company-name {
+    font-weight: 500;
+}
+
+.separator {
+    margin: 0 0.5rem;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    color: rgb(75, 85, 99);
+}
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+/* Project styles */
+/* General styling for all projects */
+.project {
+    background-color: rgb(249, 250, 251);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgb(31, 41, 55);
+    margin-bottom: 1rem;
+}
+
+.project-content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Reduce the size of the first project's image */
+.project:nth-of-type(1) .project-content img {
+    max-width: 50%; /* Adjust width to make it smaller */
+    margin-bottom: 1rem;
+}
+
+.project-content p {
+    font-size: 0.9375rem;
+    color: rgb(75, 85, 99);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    margin-top: 1rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: rgb(37, 99, 235);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+    color: rgb(29, 78, 216);
+}
+
+
+/* Certification styles */
+.certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.certification {
+    background-color: rgb(249, 250, 251);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.certification-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(31, 41, 55);
+}
+
+.cert-link {
+    color: rgb(37, 99, 235);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.cert-link:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 0 0.5rem;
+}
+
+@media (max-width: 640px) {
+    .profile-img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .skill-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
